@@ -73,20 +73,6 @@ cinema-booking/ ├── client/ │ └── views.py # Клиентская 
 
 ---
 
-## UML Диаграмма базы данных
-
-![UML диаграмма БД](./uml_diagram.png)
-
-*Описание диаграммы:*  
-- **movies:** Содержит `id (SERIAL)`, `title (VARCHAR(255))`, `description (TEXT)`.
-- **auditoriums:** Имеет поле `id (SERIAL)`.
-- **seats:** Содержит `id (SERIAL)`, `row (INT)`, `number (INT)`, `auditorium_id (FK)`. Уникальность комбинации (row, number, auditorium_id) гарантируется.
-- **bookings:** Содержит `id (SERIAL)`, `movie_id (FK)`, `seat_id (FK)`. Пара (movie_id, seat_id) уникальна, что предотвращает двойное бронирование.
-
-*Примечание:* Схему можно получить с помощью инструментов типа [draw.io](https://app.diagrams.net) и сохранить как изображение `uml_diagram.png`.
-
----
-
 ## Скрипт создания базы данных (DDL)
 
 sql
